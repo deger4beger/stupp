@@ -5,16 +5,25 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "generate": "graphql-codegen",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "graphql": "15.3.0",
+    "graphql-request": "^4.3.0",
     "next": "12.2.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-query": "^3.39.2"
   },
   "devDependencies": {
-    "@types/node": "18.7.8",
+    "@graphql-codegen/cli": "^2.11.6",
+    "@graphql-codegen/typescript": "^2.7.3",
+    "@graphql-codegen/typescript-graphql-request": "^4.5.3",
+    "@graphql-codegen/typescript-operations": "^2.5.3",
+    "@graphql-codegen/typescript-react-query": "^4.0.1",
+    "@types/node": "18.7.6",
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
     "eslint": "8.22.0",
