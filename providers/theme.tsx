@@ -14,7 +14,6 @@ const ThemeProvider = ({
 	const [theme, setTheme] = useState<"dark" | "light">("dark")
 
 	const switchTheme = () => {
-		console.log(localStorage.theme)
 		if (localStorage.theme === "light" ) {
 		  document.documentElement.classList.add("dark")
 		  localStorage.theme = "dark"
