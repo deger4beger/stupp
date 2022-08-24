@@ -1,3 +1,5 @@
+import Link from "next/link"
+import { useRouter } from "next/router"
 import { useTheme } from "../providers/theme"
 
 
@@ -11,8 +13,10 @@ const Wrapper = ({ children }: {
     <div data-mode={theme === "light" ? "light" : undefined}>
       <div className="min-h-screen min-w-full font-mono bg-zinc-900 text-slate-200">
         <Header />
-        <div className="min-h-screen">
-          { routes() }
+        <div className="min-h-screen w-8/12 m-auto">
+          <div className="pt-2 pb-6">
+          	{ routes() }
+          </div>
           { children }
         </div>
       </div>
@@ -36,13 +40,17 @@ const Header = () => {
 
 const routes = () => {
 
+	const { route: routePath } = useRouter()
+
 	const routes = [
     ["Home", "/"],
     ["Some route", "/some"]
   ]
 
 	return routes.map(([name, route]) =>
-    <a href={route} key={name} >{ name }</a>
+    <div className={
+    	"p-2 pr-4 inline" + ( routePath === route ? " underline" : "" )
+    } key={name}><Link href={route}>{ name }</Link></div>
   )
 }
 
