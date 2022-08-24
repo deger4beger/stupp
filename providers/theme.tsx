@@ -1,6 +1,6 @@
 import React, { useContext, useLayoutEffect, useState } from "react"
 
-const ThemeContext = React.createContext({
+const themeContext = React.createContext({
 	theme: "dark" as "dark" | "light",
 	switchTheme: () => {}
 })
@@ -30,12 +30,12 @@ const ThemeProvider = ({
 	}, [])
 
 	return (
-		<ThemeContext.Provider value={{theme, switchTheme}}>
+		<themeContext.Provider value={{theme, switchTheme}}>
 			{ children }
-		</ThemeContext.Provider>
+		</themeContext.Provider>
 	)
 }
 
-export const useTheme = () => useContext(ThemeContext)
+export const useTheme = () => useContext(themeContext)
 
 export default ThemeProvider

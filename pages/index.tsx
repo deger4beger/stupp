@@ -8,8 +8,12 @@ const Home: NextPage = () => {
 
   return (
     <div className={theme === "dark" ? "dark" : undefined}>
-      <div className="min-h-screen min-w-full bg-zinc-900 font-mono text-white">
+      <div className="min-h-screen min-w-full font-mono bg-zinc-200
+        text-dark dark:bg-zinc-900 dark:text-white">
         <Header />
+        <div className="min-h-screen">
+
+        </div>
       </div>
     </div>
   )
