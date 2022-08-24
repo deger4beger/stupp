@@ -7,7 +7,7 @@ const Home: NextPage = () => {
   const { theme } = useTheme()
 
   return (
-    <div className={theme === "dark" ? "dark" : undefined}>
+    <div data-mode={theme === "light" ? "light" : undefined}>
       <div className="min-h-screen min-w-full font-mono bg-zinc-900 text-white">
         <Header />
         <div className="min-h-screen">

@@ -1,9 +1,9 @@
 import React, { useContext, useLayoutEffect, useState } from "react"
 
-type themeType = "dark" | "light"
+type themeType = "default" | "light"
 
 const themeContext = React.createContext({
-	theme: "dark" as themeType,
+	theme: "default" as themeType,
 	switchTheme: () => {}
 })
 
@@ -13,7 +13,7 @@ const ThemeProvider = ({
 	children: React.ReactNode
 }) => {
 
-	const [theme, setTheme] = useState<themeType>("dark")
+	const [theme, setTheme] = useState<themeType>("default")
 
 	const switchThemeHelper = (theme: themeType) => {
 		localStorage.theme = theme
@@ -22,10 +22,10 @@ const ThemeProvider = ({
 
 	const switchTheme = () => {
 		if (localStorage.theme === "light" ) {
-		  document.documentElement.classList.add("dark")
-		  switchThemeHelper("dark")
+		  document.documentElement.classList.add("default")
+		  switchThemeHelper("default")
 		} else {
-		  document.documentElement.classList.remove("dark")
+		  document.documentElement.classList.remove("default")
 		  switchThemeHelper("light")
 		}
 	}
