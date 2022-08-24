@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ['class', '[data-mode="light"]'],
@@ -7,6 +9,9 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    // colors: {
+    //   "some": colors.slate[100]
+    // }
   },
   plugins: [
 

@@ -1,19 +1,10 @@
 import type { NextPage } from "next"
-import Header from "../components/header"
-import { useTheme } from "../providers/theme"
 
 const Home: NextPage = () => {
 
-  const { theme } = useTheme()
-
   return (
-    <div data-mode={theme === "light" ? "light" : undefined}>
-      <div className="min-h-screen min-w-full font-mono bg-zinc-900 text-white">
-        <Header />
-        <div className="min-h-screen">
-
-        </div>
-      </div>
+    <div>
+      Home page
     </div>
   )
 }
