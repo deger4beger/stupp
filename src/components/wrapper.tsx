@@ -15,7 +15,7 @@ const Wrapper = ({ children }: {
         <Header />
         <div className="min-h-screen w-8/12 m-auto">
           <div className="pt-2 pb-6">
-          	{ routes() }
+          	{ routing() }
           </div>
           { children }
         </div>
@@ -25,20 +25,25 @@ const Wrapper = ({ children }: {
 }
 
 const Header = () => {
-	// const { switchTheme } = useTheme()
 	return (
 		<div className="flex justify-center p-2 bg-gray-700 relative">
 	    <div>
 	    	Take note that this is experimental version <span className="underline">0.1</span>
 	    </div>
-	    {/*<div className="absolute top-2 right-4 cursor-pointer select-none" onClick={switchTheme}>
-	    	 🌓🌑🌕🌘🌖
-	    </div>*/}
 	  </div>
 	)
 }
 
-const routes = () => {
+const ThemeSwitcher = () => {
+	const { switchTheme } = useTheme()
+	return (
+		<div className="absolute top-2 right-4 cursor-pointer select-none" onClick={switchTheme}>
+    	 🌓🌑🌕🌘🌖
+    </div>
+	)
+}
+
+const routing = () => {
 
 	const { route: routePath } = useRouter()
 
