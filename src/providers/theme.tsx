@@ -36,7 +36,9 @@ const ThemeProvider = ({
 
 	return (
 		<themeContext.Provider value={{theme, switchTheme}}>
-			{ children }
+			<div data-mode={theme === "light" ? "light" : undefined}>
+				{ children }
+			</div>
 		</themeContext.Provider>
 	)
 }
