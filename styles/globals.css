@@ -26,7 +26,6 @@ a {
     background-clip: content-box;   /* THIS IS IMPORTANT */
 }
 
-/* ползунок скроллбара */
 ::-webkit-scrollbar-thumb {
     border: 5px solid #18181b;
     background-color: #374151;

@@ -16,7 +16,6 @@ const Wrapper = ({ children }: {
         </div>
         { children }
       </div>
-      {/*<ThemeSwitcher />*/}
     </div>
   )
 }
