@@ -8,10 +8,7 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
-    // colors: {
-    //   "some": colors.slate[100]
-    // }
+    extend: {}
   },
   plugins: [
 
