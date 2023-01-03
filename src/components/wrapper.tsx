@@ -45,7 +45,6 @@ const routing = () => {
 
 	const routes = [
     ["Home", "/"],
-    ["Some route", "/some"]
   ]
 
 	return routes.map(([name, route]) =>
